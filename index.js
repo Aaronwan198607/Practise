@@ -1,8 +1,14 @@
+const main = document.querySelector('.main');
+// main.innerHTML = 
+console.log(main);
+main.innerHTML = `<h1 class="header">標題</h1>`;
 
-const el =document.querySelector('h1');
-//宣告一個el的變數,賦予一個值給el,
-//dom的一個節點(document.querySelector), 裡面的選擇器中h1的選擇器
-el.textContent = "修改el內的文字";
+//使用反引號原因是因為反引號可以插入字串及變數,
+//也比較不會和'' & " " 讓系統判讀不到
 
-document.querySelector('h1').textContent = "把文字修改回來"
-    ;
+const list = document.querySelector('.list');
+console.log(list);
+
+
+list.innerHTML='<li><a href="http://www.google.com.tw">Google的連結</a></li>';
+
