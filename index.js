@@ -8,4 +8,6 @@ main.innerHTML = `<h1 class="header">標題</h1>`;
 
 const list=document.querySelector('.list');
 console.log(list);
-list.innerHTML=`<li><a href="http://google.com.tw">Google的連結</a></li>`;
+let myLink="http://www.yahoo.com.tw/";
+
+list.innerHTML=`<li><a href="${myLink}">Yahoo連結</a></li>`;
