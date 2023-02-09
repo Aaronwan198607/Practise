@@ -11,3 +11,6 @@ console.log(list);
 let myLink="http://www.yahoo.com.tw/";
 
 list.innerHTML=`<li><a href="${myLink}">Yahoo連結</a></li>`;
+
+122
+
