@@ -1,31 +1,30 @@
-// const main = document.querySelector('.main');
-// // main.innerHTML = 
-// console.log(main);
-// main.innerHTML = `<h1 class="header">標題</h1>`;
-
-// //使用反引號原因是因為反引號可以插入字串及變數,
-// //也比較不會和'' & " " 讓系統判讀不到
-
-// const list=document.querySelector('.list');
-// console.log(list);
-// let myLink = "http://www.yahoo.com.tw/";
-// let linkName="Yahoo網站連結"
-// let content = `<li><a href="${myLink}">${linkName}</a></li>`;
-
-// list.innerHTML = content + content;
-// //字串相加,可以再次增加content內的變數
 
 
+// const linkOne = document.querySelector('a');
+// console.log(linkOne);
+// linkOne.setAttribute("href", "www.yahoo.com.tw");
 
-const mainText = document.querySelector("p");
-console.log("hello");
-mainText.textContent = "HELLO2";
+const boxColor=document.querySelector('.box');
+console.log(boxColor);
+boxColor.setAttribute("style", "background-color:red");
 
-const main2=document.querySelector(".main2");
-console.log("main2");
-main2.innerHTML = "<h1>HELLO2222</h1>";
-let link=`<a href=http://www.yahoo.com.tw/>LINK</a>`;
-main2.innerHTML = link;
-main2.textContent = "link1111";
+//setAttribute()可修改標籤內中之屬性質
+
+
+const yahooColor=document.querySelector("a");
+console.log(yahooColor);
+yahooColor.setAttribute("class","yahooColor");
+
+//新增標籤內之選擇棄並命名為yahooColor
+
+const linkName=document.querySelectorAll('a');
+console.log(linkName);
+
+//.querySelectorAll()可選取相同標籤屬性，會以陣列的方式做選取
+
+linkName[1].setAttribute("class", "red");
+//選取單一陣列的物件在[]內中填入陣列的順序
+
+
 
 
