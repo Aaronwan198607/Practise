@@ -8,9 +8,12 @@ main.innerHTML = `<h1 class="header">標題</h1>`;
 
 const list=document.querySelector('.list');
 console.log(list);
-let myLink="http://www.yahoo.com.tw/";
+let myLink = "http://www.yahoo.com.tw/";
+let linkName="Yahoo網站連結"
+let content = `<li><a href="${myLink}">${linkName}</a></li>`;
 
-list.innerHTML=`<li><a href="${myLink}">Yahoo連結</a></li>`;
+list.innerHTML = content + content;
+//字串相加,可以再次增加content內的變數
 
-122
+
 
