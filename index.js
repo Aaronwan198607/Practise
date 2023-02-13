@@ -1,8 +1,15 @@
-const link = document.querySelector('a');
-console.log(link.getAttribute('href'));
-//宣告a標籤為變數link
-//印出link變數內的href屬性內的數值
+const btn = document.querySelector('.btn');
+const title = document.querySelector('h1');
+console.log(btn,title);
 
-let conten = link.innerHTML;
-console.log(conten);
+//監聽事件
+btn.addEventListener('click', function (e) {
+    //addEventListener=>增加監聽事件函示
+    console.log("click");
+});
 
+//另一種寫法 ↓ (但容易搞混,建議用上一個方式撰寫)
+
+document.querySelector('.btn').addEventListener('click', function (e) {
+    console.log("click");
+});
