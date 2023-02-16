@@ -15,3 +15,13 @@ btn.addEventListener('click', function (e) {
     title.innerHTML = count;
     //修改title變數h1標籤
 });
+
+const list = document.querySelector('.list');
+console.log(list);
+list.addEventListener('click', (e) => {
+    console.log("HI");
+    if (e.target.nodeName === "INPUT") {
+       console.log("HELLO"); 
+    }
+
+})
