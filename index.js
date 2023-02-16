@@ -1,27 +1,9 @@
-const btn = document.querySelector('.btn');
-const title = document.querySelector('h1');
-console.log(btn, title);
-let count = 0;
-//宣告count為數字0,
-// 不將let count = 0 放入function中
-//是因可以持續宣告不因為函示執行一次而消失宣告
+const link = document.querySelector("a");
+console.log(link);
 
-//監聽事件
-btn.addEventListener('click', function (e) {
-    //addEventListener=>增加監聽事件函示
-    console.log(count);
-    //監聽點擊按鈕觸發count變數,將數字做加總顯示在console
-    count += 1;
-    title.innerHTML = count;
-    //修改title變數h1標籤
-});
-
-const list = document.querySelector('.list');
-console.log(list);
-list.addEventListener('click', (e) => {
-    console.log("HI");
-    if (e.target.nodeName === "INPUT") {
-       console.log("HELLO"); 
-    }
-
+link.addEventListener("click", (e) => {
+    e.preventDefault();
+    //preventDefault 取消默認值執行行為不跳轉網址
+    console.log("hello");
+    document.querySelector("h1").textContent = '不轉換網址';
 })
