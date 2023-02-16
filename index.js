@@ -10,9 +10,16 @@
 
 let data=[10,20,30,40,50];
 let total=0
+let newData=[];
 data.forEach(function(item){
     //執行5次forEach迴圈
-    total+=item;
+    if(item%2 ===0)
+    total+=1;
+    newData.push(total)
     //加總陣列數值
-    console.log(total);
+        console.log(newData);
 })
+    console.log(newData);
+    //符合偶數並執行+1回傳新陣列
+ console.log(total);
+ //執行次數
