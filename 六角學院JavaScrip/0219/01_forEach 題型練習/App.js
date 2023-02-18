@@ -17,14 +17,18 @@ let data = [
   },
 ];
 
-const list=document.querySelector(".list");
-// console.log(list);
-let str="";
-data.forEach(function(item,index){
-    let contens=(`<li>${item.name},${item.Charge}</li>`);
-//NOTE:在此要先consol.log(contens),確認是否正常顯示
-    str+=contens;
+function init(){
+  const list = document.querySelector(".list");
+  // console.log(list);
+  let str = "";
+  data.forEach(function (item, index) {
+    let contens = `<li>${item.name},${item.Charge}</li>`;
+    //NOTE:在此要先consol.log(contens),確認是否正常顯示
+    str += contens;
     console.log(str);
-})
+  });
 
-list.innerHTML=str;
+  list.innerHTML = str;
+  //NOTE:在將content內的變數資料選染在HTML上
+}
+init();
