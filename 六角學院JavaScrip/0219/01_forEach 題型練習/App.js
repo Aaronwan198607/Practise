@@ -44,18 +44,25 @@ filter.addEventListener("click", (e) => {
         return;
         //POINT:終止函式執行,不跑後續的邏輯程式
     }
+
+
     let str = "";
     data.forEach(function (item, index) {
+
         console.log(e.target.value == item.Charge);
         //NOTE:確認點擊的按鈕有對應到物件裡面的資料,將其consol.log出來
-        if (e.target.value == item.Charge) {
-            str += `<li>${item.name},${item.Charge}</li>`
-            //POINT:NOTE:將#47宣告的變數str賦予值
-            console.log(str)
-        }
+
+        if (e.target.value == "全部") {
+            //POINT:設定新的名稱叫"全部"
+        str += `<li>${item.name},${item.Charge}</li>`;
+        
+    }else if (e.target.value == item.Charge) {
+        str += `<li>${item.name},${item.Charge}</li>`;
+        //POINT:NOTE:將#47宣告的變數str賦予值
+        console.log(str);
+      }
     })
     const list = document.querySelector('.list');
     list.innerHTML = str;
  //POINT:重新賦予值時innerHTML會清空ˋ物件值並重新將字串#52行帶入
-
 });
