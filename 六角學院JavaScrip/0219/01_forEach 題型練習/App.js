@@ -25,10 +25,24 @@ function init(){
     let contens = `<li>${item.name},${item.Charge}</li>`;
     //NOTE:在此要先consol.log(contens),確認是否正常顯示
     str += contens;
-    console.log(str);
+    // console.log(str);
   });
 
   list.innerHTML = str;
   //NOTE:在將content內的變數資料選染在HTML上
 }
 init();
+
+const filter = document.querySelector(".filter");
+console.log(filter);
+filter.addEventListener("click", (e) => {
+//   console.log(e.target.value==undefined);
+  //NOTE:加上unfefined主要是因為div區塊較廣,點到旁邊的位置會顯示undifine
+  //NOTE:為了判斷是不是確實有點到按鈕,而不是因觸發倒不是按鈕的區塊
+    if (e.target.value == undefined) {
+        console.log('不是點到按鈕而點到其他的地方了!!');
+        return;
+        //POINT:終止函式執行,不跑後續的邏輯程式
+    }
+    console.log(e.target.value);
+})
