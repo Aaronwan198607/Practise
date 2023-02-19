@@ -92,7 +92,7 @@ btn.addEventListener('click', function (e) {
     //POINT:將資料推到data物件中
     init();
     //POINT:因之前已經有init這函式存在,印出資料顯示,在執行一次init函式
-   stationName.value="";
+   stationName.value="免費";//預設顯示下選單"免費"
    stationCharge.value="";
    //POINT:將輸入值還原為預設初始化
 
