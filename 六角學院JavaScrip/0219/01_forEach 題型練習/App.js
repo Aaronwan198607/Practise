@@ -16,9 +16,12 @@ let data = [
     name: "小天充電站",
   },
 ];
-
-function init(){
-  const list = document.querySelector(".list");
+//POINT:預設載入函式
+ const list = document.querySelector(".list");
+ //NOTE:const 放在最外層是因為在此程式中重複取用.list的值,所以可以放在全域物件宣告中
+ //NOTE:POINT:放在function內的話只會在當中的函示中宣告變數不影響全域物件
+ function init(){
+ 
   // console.log(list);
   let str = "";
   data.forEach(function (item, index) {
@@ -32,7 +35,7 @@ function init(){
   //NOTE:在將content內的變數資料選染在HTML上
 }
 init();
-
+//POINT:篩選邏輯
 const filter = document.querySelector(".filter");
 console.log(filter);
 filter.addEventListener("click", (e) => {
@@ -65,4 +68,33 @@ filter.addEventListener("click", (e) => {
     const list = document.querySelector('.list');
     list.innerHTML = str;
  //POINT:重新賦予值時innerHTML會清空ˋ物件值並重新將字串#52行帶入
+});
+
+//POINT:新增邏輯
+const stationName = document.querySelector('.stationName');
+const stationCharge = document.querySelector('.stationCharge');
+const btn = document.querySelector('.btn');
+console.log(stationName, stationCharge, btn);
+btn.addEventListener('click', function (e) {
+    // console.log(btn);
+    console.log(stationName.value);
+    console.log(stationCharge.value);
+    //TODO:監聽事件"儲存"按鈕是否可以取出input內的值
+    //NEXT:接下來找到data物件,要將值寫進物件中,首先需要知道物件的格式
+    //  {  Charge: "免費",
+    //     name: "廖洧杰充電站"},
+    let obj={};
+    obj.Charge = stationCharge.value;
+    obj.name=stationName.value;
+//NOTE:宣告obj為空字串,並將物件內的值賦予其中,並console.log確認
+    console.log(obj);
+    data.push(obj);
+    //POINT:將資料推到data物件中
+    init();
+    //POINT:因之前已經有init這函式存在,印出資料顯示,在執行一次init函式
+   stationName.value="";
+   stationCharge.value="";
+   //POINT:將輸入值還原為預設初始化
+
+
 });
