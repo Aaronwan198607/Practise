@@ -1,8 +1,5 @@
-const tittle=document.querySelector('.tittle');
-tittle.addEventListener('click',function(e){
-    if (e.target.nodeName !== "INPUT") {
-        return;
-    }
-    console.log(e.target);
-    
-})
+const title = document.querySelector('.title');
+console.log(title.getAttribute('data-content'));
+console.log(title.getAttribute("data-num"));
+let data = title.getAttribute('data-content')
+console.log(data);
